@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
+        <file>appicon.ico</file>
         <file>Wstartpage.qss</file>
+        <file>CurrencyData.json</file>
     </qresource>
 </RCC>
