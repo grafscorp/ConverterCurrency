@@ -42,7 +42,10 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+    delete currencyInputField;
+    delete currencyOutputField;
     delete converterApi;
+    delete convertButton;
     delete ui;
 }
 
