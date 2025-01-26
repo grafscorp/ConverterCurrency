@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Wstartpage.qss</file>
+    </qresource>
+</RCC>
