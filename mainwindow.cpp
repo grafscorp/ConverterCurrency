@@ -80,4 +80,10 @@ void MainWindow::onReady(QMap<QString, QVariant> result)
             )
     );
 }
+
+void MainWindow::onError(QString errorText)
+{
+    ui->statusbar->showMessage("Error." + errorText);
+}
+
 }
