@@ -3,6 +3,8 @@
 ConverterCurrencyApi::ConverterCurrencyApi(QObject *parent)
     : QObject{parent}
 {
+
+    getCurrencyDataFromFile();
     manager = new QNetworkAccessManager;
     QObject::connect(manager, &QNetworkAccessManager::finished, this, &ConverterCurrencyApi::onResult);
 }
