@@ -49,8 +49,21 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+// void MainWindow::keyPressEvent(QKeyEvent *event)
+
+
 void MainWindow::getDataCurrency()
 {
+    QString currencyFieldText = currencyInputField->getCurrencyLine();
+    if(currencyFieldText =="" || currencyFieldText =="0"){
+        ui->statusbar->showMessage("Incorrect Input data");
+        return;
+    }
+
+    QString sum_deal = currencyFieldText.replace(",",".");
+
+    converterApi->getData(currencyInputField->getCurrencySymb(),currencyOutputField->getCurrencySymb(),sum_deal);
     ui->statusbar->showMessage("Downloading...");
+}
 
 }
