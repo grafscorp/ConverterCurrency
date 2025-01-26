@@ -86,4 +86,7 @@ void MainWindow::onError(QString errorText)
     ui->statusbar->showMessage("Error." + errorText);
 }
 
+void MainWindow::updateData()
+{
+    getDataCurrency();
 }
