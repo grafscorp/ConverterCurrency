@@ -66,4 +66,18 @@ void MainWindow::getDataCurrency()
     ui->statusbar->showMessage("Downloading...");
 }
 
+void MainWindow::onReady(QMap<QString, QVariant> result)
+{
+    currencyOutputField->setCurrencyLine(result["sum_result"].toString());
+    ui->statusbar->showMessage(result["date"].toString());
+    currencyInputField->setSubLine(
+        QString("1 " + result["currency_from"].toString() + " = "+
+        result["rate1"].toString()+" " + result["currency_to"].toString()));
+    currencyOutputField->setSubLine(
+        QString(
+            "1 " + result["currency_to"].toString() + " = " +
+            result["rate2"].toString() +" "+result["currency_from"].toString()
+            )
+    );
+}
 }
