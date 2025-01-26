@@ -27,7 +27,7 @@ FORMS += \
     currencyfield.ui \
     mainwindow.ui
 
-
+RC_ICONS = appicon.ico
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
