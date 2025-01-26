@@ -11,14 +11,20 @@ CONFIG += c++17
 
 SOURCES += \
     convertercurrencyapi.cpp \
+    currencyfield.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    supportedcunrrency.cpp
 
 HEADERS += \
     convertercurrencyapi.h \
-    mainwindow.h
+    currencyDataField.h \
+    currencyfield.h \
+    mainwindow.h \
+    supportedcunrrency.h
 
 FORMS += \
+    currencyfield.ui \
     mainwindow.ui
 
 
