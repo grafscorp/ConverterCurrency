@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     currencyInputField->setValidatorForInputLineEdit(new QDoubleValidator(0,1000000,2,this));
     currencyInputField->setCurrencyLine("1");
     convertButton->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Fixed);
-
+    convertButton->setMinimumSize(150,40);
 
     auto listCurrencyData = converterApi->getCurrencyData();
 
