@@ -9,7 +9,7 @@ QList<CurrencyDataField> SupportedCunrrency::getCurrencyData()
 
 void SupportedCunrrency::getCurrencyDataFromFile()
 {
-    QFile CurrencyDataFile("CurrencyData.json");
+    QFile CurrencyDataFile(":/CurrencyData.json");
     if(!CurrencyDataFile.open(QIODevice::ReadOnly)) throw ERROR_CANT_READ_CURRENCY_DATA_FILE;
 
     QJsonDocument currencyJsonDocument = QJsonDocument::fromJson( CurrencyDataFile.readAll() );
