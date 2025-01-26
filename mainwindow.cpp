@@ -8,6 +8,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     converterApi = new ConverterCurrencyApi(this);
+    currencyInputField = new CurrencyField(this);
+    currencyOutputField = new CurrencyField(this);
+    convertButton = new QPushButton("Convert",this);
+
 }
 
 MainWindow::~MainWindow()
