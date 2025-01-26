@@ -10,7 +10,9 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QMap>
-class ConverterCurrencyApi : public QObject
+#include <supportedcunrrency.h>
+
+class ConverterCurrencyApi : public QObject , public SupportedCunrrency
 {
     Q_OBJECT
 public:
